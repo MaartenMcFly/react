@@ -1,7 +1,7 @@
 import React from "react";
 
 const STRAVA_API = "https://www.strava.com/api/v3/";
-const STRAVA_TOKEN = "8cfbe435bccf37e20dc477077ce9be17a2a186c1";
+const STRAVA_TOKEN = "";
 const headers = { Authorization: "Bearer " + STRAVA_TOKEN };
 
 export const ATHLETE_API = STRAVA_API + "athlete";
