@@ -12,9 +12,13 @@ export class StravaComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activities: []
+      activities: [],
+      loading: true
     };
     this.updateActivities = this.updateActivities.bind(this);
+  }
+  componentDidMount() {
+    this.getAllActivities();
   }
 
   callStravaAPI = (api, field) => {
@@ -24,7 +28,7 @@ export class StravaComponent extends React.Component {
   };
 
   updateActivities(activities) {
-    this.setState({ activities: activities });
+    this.setState({ activities: activities, loading: false });
   }
 
   getAllActivities = () => {
